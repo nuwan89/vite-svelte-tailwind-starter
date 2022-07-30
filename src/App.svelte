@@ -13,7 +13,7 @@
   const changeTheme = () => {
     console.log("Change theme..");
     isDark = !isDark;
-    mainMount.style.setProperty('--primary-bg', 'red') //Dynamically set each var
+    // mainMount.style.setProperty('--primary-bg', 'red') //Dynamically set each var
   };
 </script>
 
@@ -32,8 +32,9 @@
   --text: theme(colors.gray.100);
   --primary: #40413a;
   --primary-light: #52534b;
-  --primary-bg: #1d1d1d;
-  --text-color: #ebece9;
+  --primary-bg: rgb(33, 37, 43);
+  // --text-color: #ebece9;
+  --text-color: #cccccc;
 }
 
   .card {
