@@ -4,6 +4,7 @@
   // import './app.css'
 
   let isDark;
+  let mainMount
 
   onMount(() => {
     // applyTheme(DEFAULT_THEME)
@@ -12,6 +13,7 @@
   const changeTheme = () => {
     console.log("Change theme..");
     isDark = !isDark;
+    mainMount.style.setProperty('--primary-bg', 'red') //Dynamically set each var
   };
 </script>
 
@@ -44,7 +46,7 @@
 </style>
 
 <!-- <main class="super-parent bg-blue-50 h-screen dark:bg-blue-900"> -->
-<main
+<main bind:this={mainMount}
   class="super-parent theme-light h-screen bg-primary-bg text-text-color"
   class:theme-dark={isDark}>
   <h1 class="text-5xl text-accent font-bold underline">FIX Tester</h1>
